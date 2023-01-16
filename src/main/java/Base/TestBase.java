@@ -18,6 +18,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.get(ReadData.readPropertyFile("url"));
 		//driver.get("https://www.saucedemo.com/");
+		driver.manage().deleteAllCookies();
 		driver.findElement(By.xpath("//button[@id='details-button']")).click();
 		driver.findElement(By.xpath("//a[@id='proceed-link']")).click();
 	}
